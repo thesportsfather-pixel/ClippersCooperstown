@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <title>
+    Coral Springs Clippers | Road to Cooperstown
+  </title>
+
+  <meta
+    name="description"
+    content="Support the Coral Springs Clippers on the Road to Cooperstown."
+  />
+
+  <style>
+
+    :root {
+      --bg: #07090c;
+      --bg2: #0c1118;
+
+      --panel: #111820;
+      --panel2: #19222d;
+
+      --blue: #9fc8e6;
+      --blue-dark: #5e8db0;
+
+      --silver: #d8dde2;
+      --silver-dark: #a8afb7;
+
+      --red: #e31d2d;
+
+      --white: #ffffff;
+      --muted: #aeb7c1;
+
+      --danger: #ff5a67;
+      --success: #35e59b;
+
+      --border:
+        rgba(
+          159,
+          200,
+          230,
+          0.42
+        );
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+
+      font-family:
+        Inter,
+        Arial,
+        Helvetica,
+        sans-serif;
+
+      color: var(--white);
+
+      background:
+
+        radial-gradient(
+          circle at top,
+          rgba(
+            159,
+            200,
+            230,
+            0.16
+          ),
+          transparent 36%
+        ),
+
+        radial-gradient(
+          circle at 82% 18%,
+          rgba(
+            227,
+            29,
+            45,
+            0.06
+          ),
+          transparent 28%
+        ),
+
+        linear-gradient(
+          180deg,
+          #0a0d12 0%,
+          #05070a 100%
+        );
+    }
+
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+
+    button,
+    input {
+      font: inherit;
+    }
+
+
+    button {
+      cursor: pointer;
+    }
+
+
+    .page-shell {
+      width:
+        min(
+          1180px,
+          94%
+        );
+
+      margin: 0 auto;
+
+      padding:
+        34px
+        0
+        80px;
+    }
+
+
+    /* HERO */
+
+
+    .hero {
+      text-align: center;
+
+      margin-bottom: 34px;
+    }
+
+
+    .team-logo {
+      display: block;
+
+      width:
+        min(
+          520px,
+          90vw
+        );
+
+      max-height: 250px;
+
+      object-fit: contain;
+
+      margin:
+        0 auto 24px;
+
+      filter:
+        drop-shadow(
+          0 0 20px
+          rgba(
+            159,
+            200,
+            230,
+            0.28
+          )
+        );
+    }
+
+
+    .team-kicker {
+      margin-bottom: 12px;
+
+      font-size: 13px;
+
+      font-weight: 900;
+
+      letter-spacing: 0.24em;
+
+      color: var(--blue);
+
+      text-transform: uppercase;
+    }
+
+
+    .hero-title {
+      margin: 0;
+
+      font-size:
+        clamp(
+          52px,
+          9vw,
+          108px
+        );
+
+      line-height: 0.82;
+
+      font-weight: 1000;
+
+      font-style: italic;
+
+      letter-spacing: -0.045em;
+
+      text-transform: uppercase;
+
+      text-shadow:
+
+        4px 4px 0
+        #202830,
+
+        7px 7px 0
+        rgba(
+          159,
+          200,
+          230,
+          0.24
+        );
+    }
+
+
+    .hero-title .road {
+      display: block;
+
+      color: var(--white);
+    }
+
+
+    .hero-title .coop {
+      display: block;
+
+      margin-top: 12px;
+
+      color: var(--blue);
+    }
+
+
+    .hero-subtitle {
+      width:
+        min(
+          760px,
+          95%
+        );
+
+      margin:
+        30px auto 0;
+
+      color: var(--silver);
+
+      font-size: 16px;
+
+      line-height: 1.65;
+    }
+
+
+    /* PLAYER SECTION */
+
+
+    .choose-section {
+      margin-top: 45px;
+    }
+
+
+    .choose-title {
+      margin: 0;
+
+      text-align: center;
+
+      color: var(--white);
+
+      font-size:
+        clamp(
+          30px,
+          5vw,
+          48px
+        );
+
+      font-style: italic;
+
+      font-weight: 1000;
+
+      text-transform: uppercase;
+    }
+
+
+    .choose-subtitle {
+      margin:
+        10px
+        0
+        26px;
+
+      text-align: center;
+
+      color: var(--muted);
+
+      font-size: 14px;
+    }
+
+
+    .player-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(
+          3,
+          minmax(
+            0,
+            1fr
+          )
+        );
+
+      gap: 16px;
+    }
+
+
+    .player-card {
+      min-height: 104px;
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 16px;
+
+      padding: 18px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 16px;
+
+      background:
+
+        linear-gradient(
+          145deg,
+          rgba(
+            27,
+            37,
+            48,
+            0.97
+          ),
+          rgba(
+            8,
+            13,
+            19,
+            0.98
+          )
+        );
+
+      box-shadow:
+        0 12px 30px
+        rgba(
+          0,
+          0,
+          0,
+          0.28
+        );
+
+      transition:
+        0.16s ease;
+    }
+
+
+    .player-card:hover {
+      transform:
+        translateY(
+          -3px
+        );
+
+      border-color: var(--blue);
+
+      box-shadow:
+        0 16px 34px
+        rgba(
+          0,
+          0,
+          0,
+          0.35
+        );
+    }
+
+
+    .number {
+      flex:
+        0 0 58px;
+
+      width: 58px;
+      height: 58px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      border-radius: 50%;
+
+      background:
+        linear-gradient(
+          145deg,
+          #ffffff,
+          #cfd6dc
+        );
+
+      color: #111820;
+
+      border:
+        3px solid
+        var(--blue);
+
+      font-size: 21px;
+
+      font-weight: 1000;
+
+      box-shadow:
+        0 4px 16px
+        rgba(
+          159,
+          200,
+          230,
+          0.18
+        );
+    }
+
+
+    .player-info {
+      min-width: 0;
+    }
+
+
+    .player-name {
+      display: block;
+
+      color: white;
+
+      font-size: 18px;
+
+      font-weight: 900;
+    }
+
+
+    .support-text {
+      display: block;
+
+      margin-top: 7px;
+
+      color: var(--blue);
+
+      font-size: 11px;
+
+      font-weight: 900;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+    }
+
+
+    .arrow {
+      margin-left: auto;
+
+      padding-left: 10px;
+
+      color: var(--blue);
+
+      font-size: 25px;
+
+      font-weight: 900;
+    }
+
+
+    /* GENERAL DONATION */
+
+
+    .general-donation {
+      margin-top: 50px;
+
+      padding: 34px;
+
+      border:
+        1px solid
+        var(--border);
+
+      border-radius: 22px;
+
+      background:
+
+        radial-gradient(
+          circle at top,
+          rgba(
+            159,
+            200,
+            230,
+            0.08
+          ),
+          transparent 55%
+        ),
+
+        linear-gradient(
+          145deg,
+          rgba(
+            24,
+            34,
+            44,
+            0.96
+          ),
+          rgba(
+            6,
+            10,
+            15,
+            0.98
+          )
+        );
+
+      box-shadow:
+        0 18px 50px
+        rgba(
+          0,
+          0,
+          0,
+          0.28
+        );
+    }
+
+
+    .general-kicker {
+      text-align: center;
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 900;
+
+      letter-spacing: 0.18em;
+
+      text-transform: uppercase;
+    }
+
+
+    .general-title {
+      margin:
+        8px
+        0
+        10px;
+
+      text-align: center;
+
+      color: white;
+
+      font-size:
+        clamp(
+          30px,
+          5vw,
+          44px
+        );
+
+      font-style: italic;
+
+      font-weight: 1000;
+
+      text-transform: uppercase;
+    }
+
+
+    .general-description {
+      max-width: 690px;
+
+      margin:
+        0 auto 25px;
+
+      text-align: center;
+
+      color: var(--silver);
+
+      line-height: 1.6;
+    }
+
+
+    .general-form {
+      width:
+        min(
+          620px,
+          100%
+        );
+
+      margin: 0 auto;
+    }
+
+
+    .general-field {
+      margin-bottom: 16px;
+    }
+
+
+    .general-field label {
+      display: block;
+
+      margin-bottom: 8px;
+
+      color: var(--blue);
+
+      font-size: 12px;
+
+      font-weight: 900;
+
+      letter-spacing: 0.08em;
+
+      text-transform: uppercase;
+    }
+
+
+    .general-field input {
+      width: 100%;
+
+      min-height: 51px;
+
+      padding:
+        13px 15px;
+
+      border:
+        1px solid
+        rgba(
+          255,
+          255,
+          255,
+          0.18
+        );
+
+      border-radius: 11px;
+
+      outline: none;
+
+      background: #0a1017;
+
+      color: white;
+
+      font-size: 16px;
+    }
+
+
+    .general-field input:focus {
+      border-color: var(--blue);
+
+      box-shadow:
+        0 0 0 3px
+        rgba(
+          159,
+          200,
+          230,
+          0.08
+        );
+    }
+
+
+    .amount-wrap {
+      position: relative;
+    }
+
+
+    .amount-symbol {
+      position: absolute;
+
+      left: 15px;
+
+      top: 50%;
+
+      transform:
+        translateY(
+          -50%
+        );
+
+      color: var(--blue);
+
+      font-size: 19px;
+
+      font-weight: 900;
+    }
+
+
+    .amount-wrap input {
+      padding-left: 35px;
+    }
+
+
+    .anonymous-option {
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin:
+        8px 0 20px;
+
+      color: var(--silver);
+
+      font-size: 14px;
+
+      font-weight: 800;
+    }
+
+
+    .anonymous-option input {
+      width: 18px;
+      height: 18px;
+
+      accent-color: var(--blue);
+    }
+
+
+    .general-button {
+      width: 100%;
+
+      min-height: 52px;
+
+      border: 0;
+
+      border-radius: 999px;
+
+      background:
+        linear-gradient(
+          90deg,
+          #dfe5ea,
+          var(--blue)
+        );
+
+      color: #071019;
+
+      font-size: 15px;
+
+      font-weight: 1000;
+
+      text-transform: uppercase;
+
+      cursor: pointer;
+    }
+
+
+    .general-button:hover {
+      transform:
+        translateY(
+          -1px
+        );
+    }
+
+
+    .general-button:disabled {
+      opacity: 0.5;
+
+      cursor:
+        not-allowed;
+    }
+
+
+    .general-note {
+      margin:
+        16px
+        0
+        0;
+
+      color: var(--muted);
+
+      font-size: 12px;
+
+      line-height: 1.5;
+
+      text-align: center;
+    }
+
+
+    .general-status {
+      display: none;
+
+      margin-top: 15px;
+
+      padding:
+        12px 14px;
+
+      border-radius: 10px;
+
+      text-align: center;
+
+      font-size: 14px;
+
+      font-weight: 800;
+    }
+
+
+    .general-status.error {
+      display: block;
+
+      color: #ffb5b8;
+
+      border:
+        1px solid
+        rgba(
+          255,
+          80,
+          90,
+          0.45
+        );
+
+      background:
+        rgba(
+          255,
+          80,
+          90,
+          0.1
+        );
+    }
+
+
+    .general-status.success {
+      display: block;
+
+      color: #a7f3c0;
+
+      border:
+        1px solid
+        rgba(
+          34,
+          197,
+          94,
+          0.4
+        );
+
+      background:
+        rgba(
+          34,
+          197,
+          94,
+          0.1
+        );
+    }
+
+
+    .footer {
+      margin-top: 48px;
+
+      text-align: center;
+
+      color: var(--muted);
+
+      font-size: 13px;
+
+      line-height: 1.7;
+    }
+
+
+    .footer strong {
+      color: white;
+    }
+
+
+    @media (
+      max-width:
+      800px
+    ) {
+
+      .player-grid {
+        grid-template-columns:
+          repeat(
+            2,
+            minmax(
+              0,
+              1fr
+            )
+          );
+      }
+
+    }
+
+
+    @media (
+      max-width:
+      560px
+    ) {
+
+      .page-shell {
+        width: 94%;
+
+        padding-top: 20px;
+      }
+
+
+      .team-logo {
+        width:
+          min(
+            370px,
+            90vw
+          );
+      }
+
+
+      .player-grid {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+      }
+
+
+      .player-card {
+        min-height: 90px;
+      }
+
+
+      .number {
+        width: 56px;
+        height: 56px;
+
+        font-size: 21px;
+      }
+
+
+      .player-name {
+        font-size: 17px;
+      }
+
+
+      .general-donation {
+        margin-top: 40px;
+
+        padding:
+          25px 17px;
+
+        border-radius: 18px;
+      }
+
+
+      .general-title {
+        font-size: 27px;
+      }
+
+
+      .general-description {
+        font-size: 14px;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+  <main class="page-shell">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <img
+        src="/clippers-logo.png"
+        alt="Coral Springs Clippers"
+        class="team-logo"
+      />
+
+
+      <div class="team-kicker">
+        CORAL SPRINGS CLIPPERS BASEBALL
+      </div>
+
+
+      <h1 class="hero-title">
+
+        <span class="road">
+          Road to
+        </span>
+
+        <span class="coop">
+          Cooperstown
+        </span>
+
+      </h1>
+
+
+      <p class="hero-subtitle">
+
+        Help the Coral Springs Clippers make the Cooperstown dream
+        a reality. Choose the player you would like to support
+        and sponsor one or more baseballs.
+
+      </p>
+
+    </section>
+
+
+
+    <!-- PLAYER LIST -->
+
+    <section class="choose-section">
+
+      <h2 class="choose-title">
+        Choose Your Player
+      </h2>
+
+
+      <p class="choose-subtitle">
+        Select a player below to visit their fundraiser.
+      </p>
+
+
+      <div class="player-grid">
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=michael-pisani"
+        >
+
+          <span class="number">
+            #00
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Michael Pisani
+            </span>
+
+            <span class="support-text">
+              Support Michael
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=christian-abraham"
+        >
+
+          <span class="number">
+            #1
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Christian Abraham
+            </span>
+
+            <span class="support-text">
+              Support Christian
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=eli-carrazana"
+        >
+
+          <span class="number">
+            #2
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Eli Carrazana
+            </span>
+
+            <span class="support-text">
+              Support Eli
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=sebastian-fuentes"
+        >
+
+          <span class="number">
+            #3
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Sebastian Fuentes
+            </span>
+
+            <span class="support-text">
+              Support Sebastian
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=anthony-edwards"
+        >
+
+          <span class="number">
+            #5
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Anthony Edwards
+            </span>
+
+            <span class="support-text">
+              Support Anthony
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=parker-haggerty"
+        >
+
+          <span class="number">
+            #10
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Parker Haggerty
+            </span>
+
+            <span class="support-text">
+              Support Parker
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=austin-jenkins"
+        >
+
+          <span class="number">
+            #12
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Austin Jenkins
+            </span>
+
+            <span class="support-text">
+              Support Austin
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=mathias-garcia"
+        >
+
+          <span class="number">
+            #13
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Mathias Garcia
+            </span>
+
+            <span class="support-text">
+              Support Mathias
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=nash-fox"
+        >
+
+          <span class="number">
+            #16
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Nash Fox
+            </span>
+
+            <span class="support-text">
+              Support Nash
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=adam-hall"
+        >
+
+          <span class="number">
+            #17
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Adam Hall
+            </span>
+
+            <span class="support-text">
+              Support Adam
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=chase-raymond"
+        >
+
+          <span class="number">
+            #27
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Chase Raymond
+            </span>
+
+            <span class="support-text">
+              Support Chase
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=owen-henschen"
+        >
+
+          <span class="number">
+            #28
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              Owen Henschen
+            </span>
+
+            <span class="support-text">
+              Support Owen
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+
+        <a
+          class="player-card"
+          href="/fundraiser.html?player=jb-leach"
+        >
+
+          <span class="number">
+            #50
+          </span>
+
+          <span class="player-info">
+
+            <span class="player-name">
+              JB Leach
+            </span>
+
+            <span class="support-text">
+              Support JB
+            </span>
+
+          </span>
+
+          <span class="arrow">
+            ›
+          </span>
+
+        </a>
+
+
+      </div>
+
+    </section>
+
+
+
+    <!-- GENERAL TEAM DONATION -->
+
+    <section class="general-donation">
+
+      <div class="general-kicker">
+        Support the Entire Team
+      </div>
+
+
+      <h2 class="general-title">
+        General Team Donation
+      </h2>
+
+
+      <p class="general-description">
+
+        Want to support the Coral Springs Clippers without selecting
+        a player or purchasing a baseball? Enter any custom
+        donation amount below.
+
+      </p>
+
+
+      <div class="general-form">
+
+
+        <div class="general-field">
+
+          <label
+            for="generalDonationAmount"
+          >
+            Donation Amount
+          </label>
+
+
+          <div class="amount-wrap">
+
+            <span class="amount-symbol">
+              $
+            </span>
+
+            <input
+              id="generalDonationAmount"
+              type="number"
+              min="1"
+              step="0.01"
+              inputmode="decimal"
+              placeholder="100.00"
+            />
+
+          </div>
+
+        </div>
+
+
+
+        <div class="general-field">
+
+          <label
+            for="generalDonorName"
+          >
+            Donor Name
+          </label>
+
+          <input
+            id="generalDonorName"
+            type="text"
+            maxlength="50"
+            autocomplete="name"
+            placeholder="Example: The Smith Family"
+          />
+
+        </div>
+
+
+
+        <label class="anonymous-option">
+
+          <input
+            id="generalAnonymous"
+            type="checkbox"
+          />
+
+          <span>
+            Remain Anonymous
+          </span>
+
+        </label>
+
+
+
+        <button
+          id="generalDonateButton"
+          class="general-button"
+          type="button"
+        >
+          Donate to the Clippers
+        </button>
+
+
+        <div
+          id="generalStatus"
+          class="general-status"
+        ></div>
+
+
+        <p class="general-note">
+
+          General donations support the Coral Springs Clippers directly
+          and do not purchase or reserve a baseball.
+
+        </p>
+
+
+      </div>
+
+    </section>
+
+
+
+    <footer class="footer">
+
+      <strong>
+        CORAL SPRINGS CLIPPERS
+      </strong>
+
+      <br />
+
+      Road to Cooperstown
+
+    </footer>
+
+
+
+    <script>
+
+      const generalDonationAmount =
+        document.getElementById(
+          "generalDonationAmount"
+        );
+
+
+      const generalDonorName =
+        document.getElementById(
+          "generalDonorName"
+        );
+
+
+      const generalAnonymous =
+        document.getElementById(
+          "generalAnonymous"
+        );
+
+
+      const generalDonateButton =
+        document.getElementById(
+          "generalDonateButton"
+        );
+
+
+      const generalStatus =
+        document.getElementById(
+          "generalStatus"
+        );
+
+
+      function showGeneralStatus(
+        message,
+        type
+      ) {
+
+        generalStatus.textContent =
+          message;
+
+
+        generalStatus.className =
+          "general-status " +
+          type;
+
+      }
+
+
+      generalAnonymous.addEventListener(
+        "change",
+        () => {
+
+          if (
+            generalAnonymous.checked
+          ) {
+
+            generalDonorName.value =
+              "";
+
+
+            generalDonorName.disabled =
+              true;
+
+
+            generalDonorName.placeholder =
+              "Anonymous donation";
+
+          } else {
+
+            generalDonorName.disabled =
+              false;
+
+
+            generalDonorName.placeholder =
+              "Example: The Smith Family";
+
+          }
+
+        }
+      );
+
+
+      generalDonateButton.addEventListener(
+        "click",
+        async () => {
+
+          const amount =
+            Number(
+              generalDonationAmount.value
+            );
+
+
+          let donorName;
+
+
+          if (
+            generalAnonymous.checked
+          ) {
+
+            donorName =
+              "Anonymous";
+
+          } else {
+
+            donorName =
+              generalDonorName
+                .value
+                .trim()
+                .replace(
+                  /\s+/g,
+                  " "
+                );
+
+
+            if (
+              !donorName
+            ) {
+
+              showGeneralStatus(
+                "Please enter a donor name or select Remain Anonymous.",
+                "error"
+              );
+
+
+              generalDonorName.focus();
+
+
+              return;
+
+            }
+
+          }
+
+
+          if (
+            !Number.isFinite(
+              amount
+            ) ||
+            amount < 1
+          ) {
+
+            showGeneralStatus(
+              "Please enter a donation amount of at least $1.",
+              "error"
+            );
+
+
+            generalDonationAmount.focus();
+
+
+            return;
+
+          }
+
+
+          generalDonateButton.disabled =
+            true;
+
+
+          generalDonateButton.textContent =
+            "Creating Checkout...";
+
+
+          showGeneralStatus(
+            "Preparing secure checkout...",
+            "success"
+          );
+
+
+          try {
+
+            const response =
+              await fetch(
+                "/api/create-general-donation",
+                {
+
+                  method:
+                    "POST",
+
+                  headers: {
+
+                    "Content-Type":
+                      "application/json"
+
+                  },
+
+                  body:
+                    JSON.stringify({
+
+                      amount,
+
+                      donorName,
+
+                      anonymous:
+                        generalAnonymous.checked
+
+                    })
+
+                }
+              );
+
+
+            const data =
+              await response.json();
+
+
+            if (
+              !response.ok
+            ) {
+
+              throw new Error(
+                data.error ||
+                "Unable to create donation checkout."
+              );
+
+            }
+
+
+            if (
+              !data.url
+            ) {
+
+              throw new Error(
+                "Checkout URL was not returned."
+              );
+
+            }
+
+
+            window.location.href =
+              data.url;
+
+
+          } catch (
+            error
+          ) {
+
+            console.error(
+              error
+            );
+
+
+            showGeneralStatus(
+              error.message ||
+              "General donation checkout is unavailable.",
+              "error"
+            );
+
+
+            generalDonateButton.disabled =
+              false;
+
+
+            generalDonateButton.textContent =
+              "Donate to the Clippers";
+
+          }
+
+        }
+      );
+
+
+      const params =
+        new URLSearchParams(
+          window.location.search
+        );
+
+
+      if (
+        params.get(
+          "general_donation"
+        ) ===
+        "success"
+      ) {
+
+        showGeneralStatus(
+          "Thank you for supporting the Coral Springs Clippers!",
+          "success"
+        );
+
+
+        document
+          .querySelector(
+            ".general-donation"
+          )
+          ?.scrollIntoView(
+            {
+              behavior:
+                "smooth"
+            }
+          );
+
+      }
+
+
+      if (
+        params.get(
+          "general_donation"
+        ) ===
+        "canceled"
+      ) {
+
+        showGeneralStatus(
+          "Donation checkout was canceled. No payment was made.",
+          "error"
+        );
+
+      }
+
+    </script>
+
+
+  </main>
+
+</body>
+
+</html>
